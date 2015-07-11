@@ -26,4 +26,11 @@ RSpec.describe Generator, type: :model do
       expect(generator.create_state_machine).to eq(state_machine)
     end
   end
+
+  it 'writes a sentence' do
+      sentence = 'The quick brown fox jumped. A man gasped'
+      generator = Generator.new
+      generator.corpus = sentence
+      expect(generator.write_sentence).to eq ('a man gasped ')
+  end
 end
