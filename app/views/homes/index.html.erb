@@ -1,11 +1,10 @@
-<p>
-  Modify me in `app/views/homes/index.html.erb` or change the root directive in
-  `config/routes.rb`
-</p>
-
 <%= form_for @generator do |f| %>
   <%= f.label :corpus %>
   <%= f.text_field :corpus %>
 
+  <%= f.label :paragraph_number %>
+  <%= f.select :paragraph_number, [1, 2, 3, 4, 5] %>
+
   <%= f.submit 'Generate your Lorem Ipsum' %>
 <%-end-%>
+
